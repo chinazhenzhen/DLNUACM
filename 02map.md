@@ -28,6 +28,7 @@ using namespace std;
 的 pair。我们向映射中加入新映射对的时候就是通过加入 pair来实现
 的。如果插入的 ```key``` 之前已经有了 ```value```，将会用插入的新的 ```value``` 替
 代原来的 ```value```。  
+
 ```
 #include <map>
 #include <string>
@@ -39,7 +40,9 @@ int main() {
     dict.insert(pair<string, int>("Mary", 1)); // {"Tom"->1, "Jone"->2, "Mary"->1}
     dict.insert(pair<string, int>("Tom", 2)); // {"Tom"->2, "Jone"->2, "Mary"->1}
     return 0;
-}```  
+}
+```    
+
 
 **访问映射**  
 在 C++ 中访问映射和数组一样，直接用``` []```就能访问。比如``` dict["Tom"]```
@@ -49,7 +52,8 @@ int main() {
 后再给映射赋予新的值，比如 ```dict["Tom"]=3```，这样为我们提供了另一
 种方便的插入手段。当然有些时候，我们不希望系统自动为我们生成映
 射，这时候我们需要检测 ```"Tom"```是否已经有映射了，如果已经有映射再继
-续访问。这时就需要用``` count()```函数进行判断。  
+续访问。这时就需要用``` count()```函数进行判断。    
+
 ```
 #include <map>
 #include <string>
@@ -68,7 +72,8 @@ int main() {
 
 **查找关键字**  
 在 C++ 中，如果你想知道某个关键字是否被映射过，你可以直接
-用 ```count()```方法。如果被映射过，返回 1，否则会返回 0。
+用 ```count()```方法。如果被映射过，返回 1，否则会返回 0。  
+
 ```
 #include <map>
 #include <string>
@@ -86,10 +91,12 @@ int main() {
     }
     return 0;
 }
-```
+```  
+
 **遍历映射**  
 在 C++ 中，通过迭代器可以访问映射中的每对映射，每个迭代器
 的 ```first```值对应 *key*， ```second```值对应 *value*。  
+
 ```
 #include <map>
 #include <string>
